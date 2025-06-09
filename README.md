@@ -1,9 +1,9 @@
 ```console
-███████ ██     ██████ ██       ██ ████████ ██████   ███   ███
-██      ██     ██     ██       ██    ██    ██      ██ ██ ██ ██
-██  ███ ██     █████  ██  ███  ██    ██    █████   ██  ███  ██
-██   ██ ██     ██     ██ ██ ██ ██    ██    ██      ██       ██
-███████ ██████ ██      ███   ███     ██    ██████  ██       ██
+███████ ██     ██████ ██       ██   ████████ ██████   ███   ███  ██████ ██      ████  ████████ ██████
+██      ██     ██     ██       ██      ██    ██      ██ ██ ██ ██ ██  ██ ██     ██  ██    ██    ██
+██  ███ ██     █████  ██  ███  ██      ██    █████   ██  ███  ██ ██████ ██     ██████    ██    ██████
+██   ██ ██     ██     ██ ██ ██ ██      ██    ██      ██       ██ ██     ██     ██  ██    ██    ██
+███████ ██████ ██      ███   ███       ██    ██████  ██       ██ ██     ██████ ██  ██    ██    ██████
 
 ◎ A Base Project Setup for GLFW/OpenGL
 ```
@@ -31,7 +31,6 @@
 - [📍 Overview](#-overview)
 - [👾 Features](#-features)
 - [📁 Project Structure](#-project-structure)
-  - [📂 Project Index](#-project-index)
 - [🚀 Getting Started](#-getting-started)
   - [☑️ Prerequisites](#-prerequisites)
   - [⚙️ Installation](#-installation)
@@ -39,13 +38,60 @@
   - [🧪 Testing](#🧪-testing)
 - [📌 Project Roadmap](#-project-roadmap)
 - [🔰 Contributing](#-contributing)
-- [🎗 License](#-license)
 - [🙌 Acknowledgments](#-acknowledgments)
+- [🎗 License](#-license)
 
 </details>
 
 
 ---
+
+## 👾 Features
+
+
+- Sources, headers and mains separated in distinct folders
+- Use of modern [CMake](https://cmake.org/) for much easier compiling
+- Continuous integration via [GitHub Actions](https://help.github.com/en/actions)
+
+
+---
+
+## Dependencies
+
+### Libraries
+- [GLAD]() - OpenGL loader and wrapper
+- [GLM]() - GL mathematics library
+- [GLFW]() - API for creating windows, contexts and handling input events
+- [Imgui]() - Immediate Mode Graphical User Interface
+### Compilers
+
+- Clang C/C++ Compiler
+- Microsoft compiler (MSVC)
+- MinGW Compiler (GNU)
+
+### Build Tools
+- [CMake](https://cmake.org/)
+
+   <details closed>
+   <summary>Cmake Build Configuration/Compilation</summary>
+   </details>
+
+- [Makefile]()
+
+   <details closed>
+   <summary>Makefile Build Configuration/Compilation</summary>
+   </details>
+
+- [Scripts]()
+
+   <details closed>
+   <summary>Scripts Build Configuration/Compilation</summary>
+   </details>
+
+### Others 
+* [Conan](https://conan.io/) for install packages
+* [Git](https://git-scm.com/) for cmake automatic dependencies
+* [Doxygen](https://doxygen.org/) for generate documentation (optional)
 
 ## 🔰 Contributing
 
@@ -59,7 +105,7 @@
 1. **Fork the Repository**: Start by forking the project repository to your github account.
 2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
    ```sh
-   git clone https://github.com/djoezeke/GLFWTem
+   git clone --recursive https://github.com/djoezeke/GLFWTem
    ```
 3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
    ```sh
@@ -90,19 +136,29 @@
 
 ---
 
-## 🎗 License
-
-This project is protected under the [MIT](LICENSE) License. 
-For more details, refer to the [LICENSE](LICENSE) file.
-
----
-
 ## 🙌 Acknowledgments
 
 ### References
 
-- To include ImGui : [with Conan](https://blog.conan.io/2019/06/26/An-introduction-to-the-Dear-ImGui-library.html), [with Vulkan](https://frguthmann.github.io/posts/vulkan_imgui/)
-- Vulkan code sample : [VulkanTutorial](https://github.com/Overv/VulkanTutorial), [vkSandbox](https://github.com/tstullich/vk-sandbox)
+
+- [SDL](https://github.com/djoezeke/SDLTem/) Template : with [SDL](https://github.com/libsdl-org/sdl) and [ImGui](https://github.com/ocornut/imgui) 
+- [SFML](https://github.com/djoezeke/SFMLTem/) Template : with [SFML](https://github.com/SFML/SFML) and [ImGui](https://github.com/ocornut/imgui)
+
 - Inspirational templates : [CppProject](https://github.com/tweether/cpp-project), [ModernCppStarter](https://github.com/TheLartians/ModernCppStarter)
+
+### More Reading
+
+Here are some useful resources to learn more:
+
+- [Official CMake Tutorial]()
+- [Include ImGui with Conan](https://blog.conan.io/2019/06/26/An-introduction-to-the-Dear-ImGui-library.html)
+- [ Include ImGui with Vulkan](https://frguthmann.github.io/posts/vulkan_imgui/)
+
+---
+
+## 🎗 License
+
+This project is protected under the [MIT](LICENSE) License. 
+For more details, refer to the [LICENSE](LICENSE) file.
 
 ---
