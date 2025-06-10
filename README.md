@@ -43,56 +43,82 @@
 
 </details>
 
+---
+## 📍 Overview
+
+### What is this?
+
+C++ GUI project template with SDL2, Dear ImGUI, and OpenGL 4.1.
+This repository is a template OpenGL project configured using CMake.
+It supports cross-platform builds, and provides a good starting point to begin OpenGL development.
+
+### For whom is this for?
+
+- Prototyping
+- Getting started with game programming
+- Getting started with graphics programming
 
 ---
 
 ## 👾 Features
 
-
-- Sources, headers and mains separated in distinct folders
-- Use of modern [CMake](https://cmake.org/) for much easier compiling
-- Continuous integration via [GitHub Actions](https://help.github.com/en/actions)
-
+- Modular project structure: sources, headers, and entry points are organized in distinct folders for clarity and scalability.
+- Modern [CMake](https://cmake.org/) build system for easy, cross-platform compilation and dependency management.
+- Out-of-the-box support for [GLFW](https://www.glfw.org/), [OpenGL 4.1](https://www.opengl.org/), [GLM](https://github.com/g-truc/glm), [GLAD](https://github.com/Dav1dde/glad), [Dear ImGui](https://github.com/ocornut/imgui), and [stb_image](https://github.com/nothings/stb).
+- Continuous integration via [GitHub Actions](https://help.github.com/en/actions) for automated builds and testing.
+- Example code for window creation, rendering loop, and GUI integration.
+- Easily extensible for additional libraries or custom modules.
+- Cross-platform: Windows, Linux, and macOS support.
+- Optional support for [Conan](https://conan.io/) for advanced dependency management.
+- Ready-to-use template for rapid prototyping, game development, or graphics research.
 
 ---
 
-## Dependencies
+## 🧩 Dependencies
 
-### Libraries
-- [GLAD]() - OpenGL loader and wrapper
-- [GLM]() - GL mathematics library
-- [GLFW]() - API for creating windows, contexts and handling input events
-- [Imgui]() - Immediate Mode Graphical User Interface
-### Compilers
+This project leverages several modern libraries and tools to streamline development, building, and documentation.
 
-- Clang C/C++ Compiler
-- Microsoft compiler (MSVC)
-- MinGW Compiler (GNU)
+### 📚 Core Libraries
 
-### Build Tools
-- [CMake](https://cmake.org/)
+| Library                                                                 | Purpose                        | Details                                      |
+|-------------------------------------------------------------------------|--------------------------------|----------------------------------------------|
+| [GLFW](https://github.com/glfw/glfw)                                    | Windowing/Input                | Cross-platform window and input management   |
+| [OpenGL](https://www.opengl.org/)                                       | Graphics API                   | Hardware-accelerated rendering               |
+| [GLM](https://github.com/g-truc/glm)                                    | Math Library                   | OpenGL Mathematics (vectors, matrices, etc.) |
+| [GLAD](https://github.com/Dav1dde/glad)                                 | OpenGL Loader                  | Generates OpenGL function loaders            |
+| [stb_image](https://github.com/nothings/stb)                            | Image Loading                  | Header-only image loading library            |
+| [Dear ImGui](https://github.com/ocornut/imgui)                          | GUI                            | Immediate Mode Graphical User Interface      |
+| [Assimp](https://github.com/assimp/assimp) (optional)                   | Asset Import                   | Model/asset import library                   |
 
-   <details closed>
-   <summary>Cmake Build Configuration/Compilation</summary>
-   </details>
+### 🛠️ Build Tools
 
-- [Makefile]()
+| Tool                                                                    | Purpose                        | Details                                      |
+|-------------------------------------------------------------------------|--------------------------------|----------------------------------------------|
+| [CMake](https://cmake.org/)                                             | Build System                   | Cross-platform build configuration           |
+| [Make](https://www.gnu.org/software/make/) (optional)                   | Build Automation               | Used on Linux/macOS for building             |
+| [Conan](https://conan.io/) (optional)                                   | Dependency Management          | C++ package manager for libraries            |
 
-   <details closed>
-   <summary>Makefile Build Configuration/Compilation</summary>
-   </details>
+### 🧑‍💻 Compilers
 
-- [Scripts]()
+| Compiler                                                                | Platforms                      | Minimum Version                             |
+|-------------------------------------------------------------------------|--------------------------------|---------------------------------------------|
+| [Clang](https://clang.llvm.org/)                                        | Linux/Windows/macOS            | 10+                                         |
+| [MSVC](https://visualstudio.microsoft.com/vs/features/cplusplus/)        | Windows                        | 2019+                                       |
+| [GCC/MinGW](https://gcc.gnu.org/)                                       | Linux/Windows/macOS            | 9+                                          |
 
-   <details closed>
-   <summary>Scripts Build Configuration/Compilation</summary>
-   </details>
+### 🧰 Additional Tools
 
-### Others 
-* [Conan](https://conan.io/) for install packages
-* [Git](https://git-scm.com/) for cmake automatic dependencies
-* [Doxygen](https://doxygen.org/) for generate documentation (optional)
+- [Git](https://git-scm.com/) – Version control and submodule/dependency management
+- [Doxygen](https://doxygen.org/) – (Optional) Generate code documentation
+- [Ninja](https://ninja-build.org/) – (Optional) Faster alternative build backend for CMake
 
+---
+
+> **Note:**  
+> All dependencies can be installed via your system package manager, or managed automatically using [Conan](https://conan.io/).  
+> See the [Getting Started](#-getting-started) section for installation instructions.
+
+---
 ## 🔰 Contributing
 
 - **💬 [Join the Discussions](https://github.com/djoezeke/GLFWTem/discussions)**: Share your insights, provide feedback, or ask questions.
@@ -138,21 +164,34 @@
 
 ## 🙌 Acknowledgments
 
-### References
+We would like to express our gratitude to the following projects and individuals whose work made this project possible:
 
+- [GLFW](https://www.glfw.org/) – for providing a robust, cross-platform OpenGL framework.
+- [OpenGL](https://www.opengl.org/) – for the graphics API.
+- [Dear ImGui](https://github.com/ocornut/imgui) – for the immediate mode GUI library (if used).
+- The open-source community for their invaluable libraries, tutorials, and support.
+- Special thanks to all contributors, testers, and users who provided feedback and suggestions.
 
-- [SDL](https://github.com/djoezeke/SDLTem/) Template : with [SDL](https://github.com/libsdl-org/sdl) and [ImGui](https://github.com/ocornut/imgui) 
-- [SFML](https://github.com/djoezeke/SFMLTem/) Template : with [SFML](https://github.com/SFML/SFML) and [ImGui](https://github.com/ocornut/imgui)
+If you feel your work should be acknowledged here, please open an issue or pull request.
 
-- Inspirational templates : [CppProject](https://github.com/tweether/cpp-project), [ModernCppStarter](https://github.com/TheLartians/ModernCppStarter)
+---
 
-### More Reading
+## References
 
-Here are some useful resources to learn more:
+- **Project Templates:**
+  - [SDL Template](https://github.com/djoezeke/SDLTem/) – C++ template with [SDL](https://github.com/libsdl-org/sdl) and [ImGui](https://github.com/ocornut/imgui)
+  - [SFML Template](https://github.com/djoezeke/SFMLTem/) – C++ template with [SFML](https://github.com/SFML/SFML) and [ImGui](https://github.com/ocornut/imgui)
+  - [CppProject](https://github.com/tweether/cpp-project) – General C++ project structure inspiration
+  - [ModernCppStarter](https://github.com/TheLartians/ModernCppStarter) – Modern C++ project starter
 
-- [Official CMake Tutorial]()
-- [Include ImGui with Conan](https://blog.conan.io/2019/06/26/An-introduction-to-the-Dear-ImGui-library.html)
-- [ Include ImGui with Vulkan](https://frguthmann.github.io/posts/vulkan_imgui/)
+- **Learning Resources:**
+  - [Official CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
+  - [Dear ImGui with Conan](https://blog.conan.io/2019/06/26/An-introduction-to-the-Dear-ImGui-library.html)
+  - [Dear ImGui with Vulkan](https://frguthmann.github.io/posts/vulkan_imgui/)
+  - [GLFW Documentation](https://www.glfw.org/docs/latest/)
+  - [OpenGL Tutorials](https://learnopengl.com/)
+  - [GLM Manual](https://glm.g-truc.net/0.9.9/index.html)
+  -
 
 ---
 
