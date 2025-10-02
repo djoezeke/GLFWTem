@@ -13,6 +13,3 @@
 [submodule "vendor/stb-image"]
 	path = vendor/stb-image
 	url = git@github.com:djoezeke/stb-image.git
-[submodule "vendor/assimp"]
-	path = vendor/assimp
-	url = https://github.com/assimp/assimp.git
