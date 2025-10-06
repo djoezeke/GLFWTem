@@ -10,7 +10,7 @@
 
 <p align="center"><h1 align="center">GLFW TEMPLATE</h1></p>
 <p align="center">
-	<em><code>C++ GUI/Graphics project template with GLFW, Dear ImGUI, and OpenGL 4.1.
+	<em><code>C++ Rendering/Graphics project template with GLFW, Dear ImGUI, and OpenGL 4.1.
 </code></em>
 </p>
 <p align="center">
@@ -19,12 +19,6 @@
 	<img src="https://img.shields.io/github/languages/top/djoezeke/GLFWTem?style=default&color=0080ff" alt="repo-top-language">
 	<img src="https://img.shields.io/github/languages/count/djoezeke/GLFWTem?style=default&color=0080ff" alt="repo-language-count">
 </p>
-<p align="center"><!-- default option, no dependency badges. -->
-</p>
-<p align="center">
-	<!-- default option, no dependency badges. -->
-</p>
-<br>
 
 <details><summary>Table of Contents</summary>
 
@@ -39,16 +33,23 @@
 - [📌 Project Roadmap](#-project-roadmap)
 - [🔰 Contributing](#-contributing)
 - [🙌 Acknowledgments](#-acknowledgments)
-- [🎗 License](#-license)
+- [📃 License](#-license)
 
 </details>
 
----
 ## 📍 Overview
+
+This repository template should allow for a fast and hassle-free kick start of your next GLFW project using CMake.
+Thanks to [GitHub's nature of templates](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template), you can fork this repository without inheriting its Git history.
+
+The template starts out very basic, but might receive additional features over time:
+
+- Basic CMake script to build your project and link GLFW on any operating system
+- Basic [GitHub Actions](https://github.com/features/actions) script for all major platforms
 
 ### What is this?
 
-C++ GUI project template with SDL2, Dear ImGUI, and OpenGL 4.1.
+C++ GLFW project template with GLFW, Dear ImGUI, and OpenGL 4.1.
 This repository is a template OpenGL project configured using CMake.
 It supports cross-platform builds, and provides a good starting point to begin OpenGL development.
 
@@ -57,8 +58,6 @@ It supports cross-platform builds, and provides a good starting point to begin O
 - Prototyping
 - Getting started with game programming
 - Getting started with graphics programming
-
----
 
 ## 👾 Features
 
@@ -72,53 +71,106 @@ It supports cross-platform builds, and provides a good starting point to begin O
 - Optional support for [Conan](https://conan.io/) for advanced dependency management.
 - Ready-to-use template for rapid prototyping, game development, or graphics research.
 
----
+## 🚀 Getting Started
 
-## 🧩 Dependencies
+1. Install [Git](https://git-scm.com/downloads) and [CMake](https://cmake.org/download/). Use your system's package manager if available.
+
+## ☑️ Prerequisites
 
 This project leverages several modern libraries and tools to streamline development, building, and documentation.
 
-### 📚 Core Libraries
+### 📚 Libraries
 
-| Library                                                                 | Purpose                        | Details                                      |
-|-------------------------------------------------------------------------|--------------------------------|----------------------------------------------|
-| [GLFW](https://github.com/glfw/glfw)                                    | Windowing/Input                | Cross-platform window and input management   |
-| [OpenGL](https://www.opengl.org/)                                       | Graphics API                   | Hardware-accelerated rendering               |
-| [GLM](https://github.com/g-truc/glm)                                    | Math Library                   | OpenGL Mathematics (vectors, matrices, etc.) |
-| [GLAD](https://github.com/Dav1dde/glad)                                 | OpenGL Loader                  | Generates OpenGL function loaders            |
-| [stb_image](https://github.com/nothings/stb)                            | Image Loading                  | Header-only image loading library            |
-| [Dear ImGui](https://github.com/ocornut/imgui)                          | GUI                            | Immediate Mode Graphical User Interface      |
-| [Assimp](https://github.com/assimp/assimp) (optional)                   | Asset Import                   | Model/asset import library                   |
-
-### 🛠️ Build Tools
-
-| Tool                                                                    | Purpose                        | Details                                      |
-|-------------------------------------------------------------------------|--------------------------------|----------------------------------------------|
-| [CMake](https://cmake.org/)                                             | Build System                   | Cross-platform build configuration           |
-| [Make](https://www.gnu.org/software/make/) (optional)                   | Build Automation               | Used on Linux/macOS for building             |
-| [Conan](https://conan.io/) (optional)                                   | Dependency Management          | C++ package manager for libraries            |
+<div>
+   <table> 
+      <thead> 
+         <tr> <th>Library</th> <th>Purpose</th> <th>Details</th></tr> 
+      </thead> 
+      <tbody> 
+         <tr> 
+            <td><a href="https://github.com/glfw/glfw">GLFW</a></td> <td>Window/Input</td> <td>Cross-platform window and input management</td> 
+         </tr> 
+         <tr> 
+            <td><a href="https://www.opengl.org/">OpenGL</a></td> <td>Graphics API</td> <td>Hardware-accelerated rendering</td> 
+         </tr> 
+         <tr> 
+            <td><a href="https://github.com/ocornut/imgui">ImGui</a></td> <td>Graphical User Interface</td> <td>Immediate Mode Graphical User Interface</td> 
+         </tr> 
+         <tr> 
+            <td><a href="https://github.com/g-truc/glm">GLM</a></td> <td>OpenGL Math Library</td> <td>OpenGL Mathematics (vectors, matrices, etc.)</td> 
+         </tr> 
+         <tr> 
+            <td><a href="https://github.com/djoezeke/glad">Glad</a></td> <td>OpenGL Loader</td> <td>OpenGL function loaders</td> 
+         </tr> 
+         <tr> 
+            <td><a href="https://github.com/nothings/stb">Stb Image</a></td> <td>Image Loading</td> <td>Header-only image loading library</td> 
+         </tr> 
+      </tbody> 
+   </table> 
+</div>
 
 ### 🧑‍💻 Compilers
 
-| Compiler                                                                | Platforms                      | Minimum Version                             |
-|-------------------------------------------------------------------------|--------------------------------|---------------------------------------------|
-| [Clang](https://clang.llvm.org/)                                        | Linux/Windows/macOS            | 10+                                         |
-| [MSVC](https://visualstudio.microsoft.com/vs/features/cplusplus/)        | Windows                        | 2019+                                       |
-| [GCC/MinGW](https://gcc.gnu.org/)                                       | Linux/Windows/macOS            | 9+                                          |
+<div>
+   <table> 
+      <thead> 
+         <tr> <th>Compiler</th> <th>Platforms</th> <th>Minimum Version</th></tr> 
+      </thead> 
+      <tbody> 
+         <tr> 
+            <td><a href="https://clang.llvm.org/">Clang</a></td> <td>Linux/Windows/MacOs</td> <td>10</td> 
+         </tr> 
+         <tr> 
+            <td><a href="https://visualstudio.microsoft.com/vs/features/cplusplus/">MSVC</a></td> <td>Windows Only</td> <td>2019</td> 
+         </tr> 
+         <tr> 
+            <td><a href="https://gcc.gnu.org/">GNU/MinGW</a></td> <td>Linux/Windows/MacOs</td><td>9</td> 
+         </tr> 
+      </tbody> 
+   </table> 
+</div>
+
+### 🛠️ Build Tools
+
+<details closed>
+   <summary> <a href="https://cmake.org/">Cmake - Cross-platform build configuration </a></summary>
+</details>
+
+<details closed>
+   <summary> <a href="https://www.gnu.org/software/make/">Make - Linux/macOS build Automation</a></summary>
+</details>
+
+<details closed>
+   <summary> <a href="">Script</a></summary>
+</details>
 
 ### 🧰 Additional Tools
 
 - [Git](https://git-scm.com/) – Version control and submodule/dependency management
 - [Doxygen](https://doxygen.org/) – (Optional) Generate code documentation
 - [Ninja](https://ninja-build.org/) – (Optional) Faster alternative build backend for CMake
+- [Conan](https://conan.io/) for install packages (optional)
 
----
+## ⚙️ Installation
 
-> **Note:**  
-> All dependencies can be installed via your system package manager, or managed automatically using [Conan](https://conan.io/).  
-> See the [Getting Started](#-getting-started) section for installation instructions.
+### Using [CMake](https://cmake.org/)
 
----
+<details closed>
+<summary>Configuring and Building</summary>
+
+</details>
+
+### Using [Make](https://www.gnu.org/software/make/)
+
+<details closed>
+<summary>Configuring and Building</summary>
+
+</details>
+
+## 🤖 Usage
+
+## 🧪 Testing
+
 ## 🔰 Contributing
 
 - **💬 [Join the Discussions](https://github.com/djoezeke/GLFWTem/discussions)**: Share your insights, provide feedback, or ask questions.
@@ -160,8 +212,6 @@ This project leverages several modern libraries and tools to streamline developm
 </p>
 </details>
 
----
-
 ## 🙌 Acknowledgments
 
 We would like to express our gratitude to the following projects and individuals whose work made this project possible:
@@ -174,30 +224,41 @@ We would like to express our gratitude to the following projects and individuals
 
 If you feel your work should be acknowledged here, please open an issue or pull request.
 
----
+### References
 
-## References
+- [SFMLTem](https://github.com/djoezeke/SFMLTem/) : A SFML Starter Template with [SFML](https://github.com/SFML/SFML/) and [ImGui](https://github.com/ocornut/imgui).
+- [SDLTem](https://github.com/djoezeke/SDLTem/) : A SDL Starter Template with [SDL](https://github.com/libsdl-org/sdl) and [ImGui](https://github.com/ocornut/imgui).
+- [CppStarter](https://github.com/djoezeke/CppStarter/) : A C/C++ Starter Template.
 
-- **Project Templates:**
-  - [SDL Template](https://github.com/djoezeke/SDLTem/) – C++ template with [SDL](https://github.com/libsdl-org/sdl) and [ImGui](https://github.com/ocornut/imgui)
-  - [SFML Template](https://github.com/djoezeke/SFMLTem/) – C++ template with [SFML](https://github.com/SFML/SFML) and [ImGui](https://github.com/ocornut/imgui)
-  - [CppProject](https://github.com/tweether/cpp-project) – General C++ project structure inspiration
-  - [ModernCppStarter](https://github.com/TheLartians/ModernCppStarter) – Modern C++ project starter
+### More Reading
 
-- **Learning Resources:**
-  - [Official CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
-  - [Dear ImGui with Conan](https://blog.conan.io/2019/06/26/An-introduction-to-the-Dear-ImGui-library.html)
-  - [Dear ImGui with Vulkan](https://frguthmann.github.io/posts/vulkan_imgui/)
-  - [GLFW Documentation](https://www.glfw.org/docs/latest/)
-  - [OpenGL Tutorials](https://learnopengl.com/)
-  - [GLM Manual](https://glm.g-truc.net/0.9.9/index.html)
-  -
+- [Official CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
+- [Dear ImGui with Conan](https://blog.conan.io/2019/06/26/An-introduction-to-the-Dear-ImGui-library.html)
+- [Dear ImGui with Vulkan](https://frguthmann.github.io/posts/vulkan_imgui/)
+- [GLFW Documentation](https://www.glfw.org/docs/latest/)
+- [OpenGL Tutorials](https://learnopengl.com/)
+- [GLM Manual](https://glm.g-truc.net/0.9.9/index.html)
 
----
+## 📃 License
 
-## 🎗 License
-
-This project is protected under the [MIT](LICENSE) License. 
+This project is protected under the [MIT](LICENSE) License.
 For more details, refer to the [LICENSE](LICENSE) file.
 
----
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="
+      https://api.star-history.com/svg?repos=GLFWTem/djoezeke&type=Date&theme=dark
+    "
+  />
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="
+      https://api.star-history.com/svg?repos=GLFWTem/djoezeke&type=Date
+    "
+  />
+  <img
+    alt="Star History Chart"
+    src="https://api.star-history.com/svg?repos=GLFWTem/djoezeke&type=Date"
+  />
+</picture>
