@@ -96,7 +96,7 @@ endif()
 add_subdirectory(vendor)
 
 # Build the documentation   
-if(MYTOML_ENABLE_DOXYGEN)
+if(GLFWTEM_ENABLE_DOXYGEN)
     add_subdirectory(docs)
 endif()
 
