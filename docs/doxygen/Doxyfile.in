@@ -1,0 +1,23 @@
+PROJECT_NAME           = "@PROJECT_NAME@"
+PROJECT_NUMBER         = "@PROJECT_VERSION@"
+PROJECT_BRIEF          = "GLFW/OpenGL/ImGui project template"
+OUTPUT_DIRECTORY       = "@CMAKE_CURRENT_BINARY_DIR@/doxygen"
+CREATE_SUBDIRS         = NO
+ALLOW_UNICODE_NAMES    = YES
+
+OPTIMIZE_OUTPUT_FOR_C  = NO
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = NO
+
+INPUT                  = "@CMAKE_SOURCE_DIR@/include" "@CMAKE_SOURCE_DIR@/examples"
+FILE_PATTERNS          = *.h *.hpp *.c *.cc *.cpp
+RECURSIVE              = YES
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+QUIET                  = YES
+WARN_IF_UNDOCUMENTED   = NO
+WARN_IF_DOC_ERROR      = YES
+
+HTML_OUTPUT            = html
